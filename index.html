@@ -12,24 +12,49 @@
       padding: 0;
       background: linear-gradient(to bottom, #fff8f0, #ffe0e0);
       color: #333;
+      scroll-behavior: smooth;
     }
     header, section, footer {
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
+      animation: fadeIn 1s ease-in;
     }
     header {
       background: #fff0f0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     }
-    h1, h2 {
+    h1 {
       font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
       color: #a52a2a;
+    }
+    h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #a52a2a;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    #gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
     }
     #gallery img {
       width: 100%;
-      max-width: 300px;
-      margin: 10px;
-      border-radius: 10px;
+      max-width: 280px;
+      border-radius: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    #gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
     form {
       max-width: 400px;
@@ -37,9 +62,9 @@
     }
     input, select, button {
       width: 100%;
-      padding: 10px;
-      margin: 5px 0;
-      border-radius: 5px;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
       border: 1px solid #ccc;
       font-size: 16px;
     }
@@ -48,13 +73,15 @@
       color: white;
       border: none;
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
     button:hover {
       background-color: #8b0000;
     }
     #countdown {
-      font-size: 24px;
+      font-size: 20px;
       margin-top: 10px;
+      font-weight: bold;
       color: #a52a2a;
     }
     iframe {
@@ -62,7 +89,17 @@
       width: 100%;
       height: 300px;
       margin-top: 20px;
-      border-radius: 10px;
+      border-radius: 12px;
+    }
+    footer {
+      background-color: #fbeaea;
+      color: #a52a2a;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
